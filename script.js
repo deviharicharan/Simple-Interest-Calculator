@@ -1,34 +1,30 @@
 function compute() {
-    var principalBox = document.getElementById('p');
-    var p = principalBox.value;
-    var t = document.getElementById('t').value;
-    var r = document.getElementById('r').value;
+    principalBox = document.getElementById('principal');
+    var principal = principalBox.value;
+    var years = document.getElementById('years').value;
+    var rate = document.getElementById('rate').value;
     var a = new Date();
-    date = a.getFullYear();
-    if (p <= 0) {
-        alert("Please enter the valid Amount!!");
+    presentYear = a.getFullYear();
+    if (principal <= 0) {
+        alert("Enter a postive number ");
         principalBox.focus();
         principalBox.value = "";
     } else {
-        var x = (p * t * r) / 100;
-        var year = parseInt(t);
-        var tf = date + year;
+        var interest = (principal * years * rate) / 100;
+        years = parseInt(years);
+        years += presentYear;
         document.getElementById("result").innerHTML =
             "If you deposit <b class='color'>" +
-            p +
+            principal +
             "</b>, <br> at an interest rate of <b class='color'>" +
-            r +
+            rate +
             "%</b>. <br>You will receive an amount of <b class='color'>" +
-            x +
+            interest +
             "</b>, <br>in the year <b class='color'> " +
-            tf + "</b>.";
+            years + "</b>.";
     }
 }
 
 function sliderChange(val) {
     document.getElementById("sliderVal").innerHTML = val + "%";
-    // compute();
-
 }
-var button = document.getElementById('btn');
-button.addEventListener('click', compute);

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Simple Interest Calculator</title>
 </head>
 
 <body>
@@ -15,16 +15,16 @@
         <table>
             <tr>
                 <td>Amount</td>
-                <td><input type="number" class="second-column" id="p" value="" oninput="errorCheck(this.value)"></td>
+                <td><input type="number" class="second-column" id="principal" value="" oninput="errorCheck(this.value)"></td>
             </tr>
             <tr>
                 <td>Interest Rate</td>
-                <td><input type="range" class="second-column" id="r" min="1" max="20" step="0.25" value="10.25" oninput="sliderChange(this.value)"> <span id="sliderVal">10.25%</span></td>
+                <td><input type="range" class="second-column" id="rate" min="1" max="20" step="0.25" value="10.25" oninput="sliderChange(this.value)"> <span id="sliderVal">10.25%</span></td>
             </tr>
             <tr>
                 <td>No. of Years</td>
                 <td>
-                    <select id="t" class="second-column">
+                    <select id="years" class="second-column">
 						<option value="1" selected>1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -40,7 +40,7 @@
             </tr>
         </table>
         <br>
-        <button id="btn">Compute Interest</button></td>
+        <button id="btn" onclick="compute()">Compute Interest</button></td>
         <br><br>
         <span id="result"></span> <br>
         <footer>

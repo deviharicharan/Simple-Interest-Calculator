@@ -12,6 +12,7 @@ h1 {
 
 .maindiv {
     margin: auto;
+    color: black;
     width: 300px;
     border: solid;
     border-radius: 25px;
