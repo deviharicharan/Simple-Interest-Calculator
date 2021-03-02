@@ -1,23 +1,30 @@
 body {
-    background-color: orange;
-    margin: 100px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
     padding: 0px;
 }
 
 h1 {
     color: grey;
     font-family: verdana;
-    font-size: 20px;
+    text-align: center;
 }
 
 .maindiv {
     margin: auto;
-    color: black;
-    width: 300px;
+    width: 500px;
     border: solid;
     border-radius: 25px;
     padding: 20px;
     background-color: white;
+}
+
+table {
+    margin: auto;
+}
+
+#r {
+    width: 115px;
 }
 
 .color {
@@ -26,9 +33,93 @@ h1 {
 
 footer {
     margin: auto;
-    width: 300px;
 }
 
 .second-column {
     margin-left: 15px;
+}
+
+.align {
+    width: 55%;
+    margin: auto;
+}
+
+@media screen and (device-width: 412px) and (device-height:892px) {
+    body {
+        margin: 10px;
+        margin-top: 150px;
+        padding: 0px;
+        background-color: rgb(62, 177, 127);
+    }
+    .maindiv {
+        margin: auto;
+        width: 300px;
+        border: solid;
+        border-radius: 25px;
+        padding: 20px;
+        background-color: white;
+    }
+    #r {
+        width: 129px;
+    }
+}
+
+@media screen and (device-width: 412px) and (device-height:846px) {
+    body {
+        margin: 0px;
+        margin-top: 150px;
+        padding: 0px;
+        background-color: rgb(62, 177, 127);
+    }
+    .maindiv {
+        margin: auto;
+        width: 300px;
+        border: solid;
+        border-radius: 25px;
+        padding: 20px;
+        background-color: white;
+    }
+    #r {
+        width: 125px;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height:780px) {
+    body {
+        margin: 0px;
+        margin-top: 150px;
+        padding: 0px;
+        background-color: rgb(234, 236, 116);
+    }
+    .maindiv {
+        margin: auto;
+        width: 300px;
+        border: solid;
+        border-radius: 25px;
+        padding: 20px;
+        background-color: white;
+    }
+    #r {
+        width: 125px;
+    }
+}
+
+@media screen and (device-width: 375px) and (device-height:750px) {
+    body {
+        margin: 0px;
+        margin-top: 150px;
+        padding: 0px;
+        background-color: rgb(95, 221, 235);
+    }
+    .maindiv {
+        margin: auto;
+        width: 300px;
+        border: solid;
+        border-radius: 25px;
+        padding: 20px;
+        background-color: white;
+    }
+    #r {
+        width: 125px;
+    }
 }
