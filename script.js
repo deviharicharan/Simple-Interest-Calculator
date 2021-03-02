@@ -1,27 +1,27 @@
 function compute() {
-    principalBox = document.getElementById('principal');
-    var principal = principalBox.value;
-    var years = document.getElementById('years').value;
-    var rate = document.getElementById('rate').value;
+    var principalBox = document.getElementById('p');
+    var p = principalBox.value;
+    var t = document.getElementById('t').value;
+    var r = document.getElementById('r').value;
     var a = new Date();
-    presentYear = a.getFullYear();
-    if (principal <= 0) {
-        alert("Enter a postive number ");
+    date = a.getFullYear();
+    if (p <= 0) {
+        alert("Please enter the valid Amount!!");
         principalBox.focus();
         principalBox.value = "";
     } else {
-        var interest = (principal * years * rate) / 100;
-        years = parseInt(years);
-        years += presentYear;
+        var x = (p * t * r) / 100;
+        var year = parseInt(t);
+        var tf = date + year;
         document.getElementById("result").innerHTML =
             "If you deposit <b class='color'>" +
-            principal +
+            p +
             "</b>, <br> at an interest rate of <b class='color'>" +
-            rate +
+            r +
             "%</b>. <br>You will receive an amount of <b class='color'>" +
-            interest +
+            x +
             "</b>, <br>in the year <b class='color'> " +
-            years + "</b>.";
+            tf + "</b>.";
     }
 }
 
